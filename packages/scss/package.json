@@ -1,6 +1,6 @@
 {
   "name": "@perenciolo-design-system/scss",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "license": "MIT",
   "author": "Gustavo Lima <dev.gustavolima@gmail.com>",
@@ -16,7 +16,6 @@
     "postbuild": "yarn tcm lib/",
     "dev": "nodemon --watch src --exec yarn build -e scss"
   },
-  "dependencies": {},
   "devDependencies": {
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.2.0",
