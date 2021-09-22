@@ -1,0 +1,37 @@
+{
+  "name": "@ds.e/core",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "license": "MIT",
+  "author": "Gustavo Perenciolo <dev.gustavolima@gmail.com>",
+  "scripts": {
+    "build": "yarn lerna run build",
+    "predev": "rm -rf **/lib/*",
+    "dev": "yarn lerna run dev",
+    "commit": "yarn git-cz"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^7.0.2",
+    "lerna": "^4.0.0"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*",
+      "playgrounds/*"
+    ],
+    "nohoist": [
+      "**/normalize-scss",
+      "**/jest-css-modules"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+}
