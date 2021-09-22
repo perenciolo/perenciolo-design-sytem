@@ -23,7 +23,7 @@
     "@babel/preset-typescript": "^7.15.0",
     "@jest/types": "^27.1.1",
     "@modular-css/rollup": "^26.0.0",
-    "@perenciolo-design-system/foundation": "^0.1.0",
+    "@perenciolo-design-system/foundation": "^1.0.1",
     "@storybook/addon-a11y": "^6.3.8",
     "@storybook/addon-centered": "^5.3.21",
     "@storybook/addon-info": "^5.3.21",
