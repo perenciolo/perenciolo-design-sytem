@@ -1,7 +1,7 @@
 {
   "name": "@perenciolo-design-system/core",
   "version": "1.0.0",
-  "private": true,
+  "private": "true",
   "main": "index.js",
   "license": "MIT",
   "author": "Gustavo Perenciolo <dev.gustavolima@gmail.com>",
