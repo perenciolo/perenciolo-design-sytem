@@ -4,7 +4,7 @@ const sass = require('node-sass')
 
 const getComponents = () => {
   let allComponents = []
-  const types = ['atoms', 'molecules', 'organisms']
+  const types = ['atoms', 'molecules']
 
   types.forEach(type => {
     const allFiles = fs.readdirSync(path.resolve('src', type)).map(file => ({
@@ -31,6 +31,10 @@ const compile = (source, filename) => {
     result.css.toString()
   )
 }
+
+try {
+  fs.mkdirSync(path.resolve('lib'))
+} catch (error) {}
 
 compile(path.resolve('src', 'global.scss'), path.resolve('lib', 'global.module.css'))
 

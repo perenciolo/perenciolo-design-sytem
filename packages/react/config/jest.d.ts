@@ -1,7 +1,9 @@
 /// <reference types="@jest/globals" />
-/// <reference types="'@jest/types'" />
+/// <reference types="@jest/types" />
+/// <reference types="@types/jest" />
 
-import { Global } from "@jest/globals";
+import { Global } from "@jest/types/build/Global";
+
 
 export interface ICustomGlobal extends Global {
   mockFormatMessage: (formatMessageFn: jest.Mock) => any;
