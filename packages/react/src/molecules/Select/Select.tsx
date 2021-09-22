@@ -1,7 +1,7 @@
-import classes from '@ds.e/scss/lib/Select.module.css'
+import classes from '@perenciolo-design-system/scss/lib/Select.module.css'
 import { default as classNames, default as classnames } from 'classnames'
 import React, { createRef, KeyboardEventHandler, useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { SelectProps, SelectOption, KEY_CODES, RenderProps } from './Select.types'
+import { KEY_CODES, RenderProps, SelectOption, SelectProps } from './Select.types'
 
 function Select({
     label= 'Please select an option...',

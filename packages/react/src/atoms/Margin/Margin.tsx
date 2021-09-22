@@ -1,5 +1,5 @@
-import { Spacing } from '@ds.e/foundation';
-import classes from '@ds.e/scss/lib/margin.module.css';
+import { Spacing } from '@perenciolo-design-system/foundation';
+import classes from '@perenciolo-design-system/scss/lib/margin.module.css';
 import classnames from 'classnames';
 import React, { useEffect } from 'react';
 

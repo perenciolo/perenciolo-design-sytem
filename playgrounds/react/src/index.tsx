@@ -1,4 +1,4 @@
-import { Margin, Select } from "@ds.e/react";
+import { Margin, Select } from "@perenciolo-design-system/react";
 import React from "react";
 import ReactDOM from "react-dom";
 

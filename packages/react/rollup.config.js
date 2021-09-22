@@ -15,5 +15,5 @@ export default {
   },
   plugins: [ts(), css()],
   preserveModules: true,
-  external: ['react', '@ds.e/foundation', '@ds.e/scss', 'classnames']
+  external: ['react', '@perenciolo-design-system/foundation', '@perenciolo-design-system/scss', 'classnames']
 }
