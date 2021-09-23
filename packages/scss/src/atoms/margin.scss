@@ -1,14 +1,14 @@
-@import "foundation/all";
+@import "../foundation/all";
 
 $sides: left, right, top, bottom;
 
 @each $space, $value in $spacing {
-  .dse-margin-#{$space} {
+  .pMargin#{to-upper-case(str-slice($space, 0, 1))}#{str-slice($space, 2)} {
     margin: $value;
   }
 
   @each $side in $sides {
-    .dse-margin-#{$side}-#{$space} {
+    .pMargin#{to-upper-case(str-slice($side, 0, 1))}#{str-slice($side, 2)}#{to-upper-case(str-slice($space, 0, 1))}#{str-slice($space, 2)} {
       margin-#{$side}: $value;
     }
   }

@@ -1,11 +1,11 @@
-@import "foundation/all";
+@import "../foundation/all";
 
 @each $size, $value in $spacing {
-  .dse-width-#{$size} {
+  .pWidth#{to-upper-case(str-slice($size, 0, 1))}#{str-slice($size, 2)} {
     width: $value;
   }
 
-  .dse-height-#{$size} {
+  .pHeight#{to-upper-case(str-slice($size, 0, 1))}#{str-slice($size, 2)} {
     height: $value;
   }
 }

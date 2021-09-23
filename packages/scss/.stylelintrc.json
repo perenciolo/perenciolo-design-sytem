@@ -9,11 +9,7 @@
   ],
   "rules": {
     "indentation": 2,
-    "statement-max-nesting-depth": [
-      2,
-      {
-        "countAtRules": false
-      }
-    ]
+    "max-nesting-depth": 2,
+    "selector-class-pattern": null
   }
 }

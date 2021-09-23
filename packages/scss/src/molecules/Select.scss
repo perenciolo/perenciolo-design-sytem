@@ -1,11 +1,11 @@
-@import "foundation/all";
+@import "../foundation/all";
 
-.dse-select {
+.pSelect {
   display: flex;
   flex-direction: column;
   position: relative;
 
-  &__label {
+  &Label {
     @include padding("xs");
     align-items: center;
     background: $form-bg-color;
@@ -16,7 +16,7 @@
     justify-content: space-between;
   }
 
-  &__overlay {
+  &Overlay {
     @include padding("none");
     @include margin("none");
     background-color: $form-bg-color;
@@ -28,7 +28,7 @@
     z-index: 99;
   }
 
-  &__option {
+  &Option {
     @include padding("xs");
     align-items: center;
     box-sizing: border-box;
@@ -38,24 +38,24 @@
     width: 100%;
   }
 
-  &__option--highlighted {
+  &OptionHighlighted {
     background-color: $form-bg-color-hover;
   }
 
-  &__option--selected {
+  &OptionSelected {
     background-color: $form-bg-option-selected;
     color: $form-color-option-selected;
   }
 
-  &__caret {
+  &Caret {
     display: flex;
     transition: all 0.25s ease;
 
-    &--open {
+    &Open {
       transform: rotate(180deg);
     }
 
-    &--closed {
+    &Closed {
       transform: rotate(0deg);
     }
   }

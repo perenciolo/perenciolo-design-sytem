@@ -26,7 +26,8 @@
     ],
     "nohoist": [
       "**/normalize-scss",
-      "**/jest-css-modules"
+      "**/jest-css-modules",
+      "**/gulp*"
     ]
   },
   "config": {
