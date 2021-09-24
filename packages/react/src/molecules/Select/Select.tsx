@@ -28,12 +28,12 @@ function Select({
       return null;
     }
     return options[selectedIndex]
-  },[selectedIndex])
+  },[selectedIndex]);
   
   const caretClasses = useMemo(() => classNames({
-    [classes['dse-select__caret']]: true,
-    [classes['dse-select__caret--open']]: isOpen,
-    [classes['dse-select__caret--closed']]: !isOpen
+    [classes.pSelectCaret]: true,
+    [classes.pSelectCaretOpen]: isOpen,
+    [classes.pSelectCaretClosed]: !isOpen
   }), [isOpen])
 
   const handleLabelClick = () => {
@@ -91,22 +91,22 @@ function Select({
   }, [isOpen, highlightedIndex])
 
   return (
-    <div className={classes['dse-select']}>
-      <button data-testid="DseSelectButton" onKeyDown={handleKeyDown} aria-controls="dse-select-list" aria-haspopup={true} aria-expanded={isOpen? true: undefined} ref={labelRef} onClick={handleLabelClick} className={classes['dse-select__label']}>
+    <div className={classes.pSelect}>
+      <button data-testid="DseSelectButton" onKeyDown={handleKeyDown} aria-controls="dse-select-list" aria-haspopup={true} aria-expanded={isOpen? true: undefined} ref={labelRef} onClick={handleLabelClick} className={classes.pSelectLabel}>
         {!selectedOption? label: selectedOption.label}
         <svg className={caretClasses} width="1rem" height="1rem" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
       </button>
       {isOpen && 
-        <ul role="menu" id="dse-select-list" style={{top: overlayTop}} className={classes['dse-select__overlay']}>
+        <ul role="menu" id="dse-select-list" style={{top: overlayTop}} className={classes.pSelectOverlay}>
           {options.map((option,optionIndex)=> {
             const isSelected = selectedIndex === optionIndex
             const isHighlighted = highlightedIndex === optionIndex
             const itemClasses = classnames({
-              [classes['dse-select__option']]:true,
-              [classes['dse-select__option--selected']]: isSelected,
-              [classes['dse-select__option--highlighted']]: isHighlighted,
+              [classes.pSelectOption]:true,
+              [classes.pSelectOptionHighlighted]: isHighlighted,
+              [classes.pSelectOptionSelected]: isSelected,
             })
             const ref = optionRefs[optionIndex]
 
